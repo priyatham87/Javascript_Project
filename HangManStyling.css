@@ -1,0 +1,240 @@
+ 
+       /* General Styles */
+       .hangmanGameBg {
+        width: 97%;
+        height: 92vh; /* Make the height responsive */
+        background-image: url(./HangmanBgImg.png);
+        background-size: 150px 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        padding: 20px; /* Add padding to ensure content doesn't touch the edges */
+    }
+    
+    .hangmanTemplate {
+        background-color: white;
+        width: 100%;
+        max-width: 800px; /* Limit the width for large screens */
+        height: auto;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column; /* Make it column-based for small screens */
+        align-items: center;
+        gap: 20px; /* Adjust gap */
+        padding: 20px;
+        background-color: rgb(141, 183, 141);
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .img-box {
+        text-align: center;
+    }
+    
+    .img-box img {
+        max-width: 100%;
+        height: auto; /* Make the image responsive */
+        max-height: 200px;
+    }
+    
+    #hangman {
+        color: brown;
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+    
+    .word-display {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .word-display .letter {
+        border-bottom: 3px solid black;
+        width: 28px;
+        font-size: 2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 15px;
+        color: chocolate;
+    }
+    
+    .guessed {
+        border-color: transparent !important;
+        margin: -42px 0px 12px;
+    }
+    
+    .game-box h4 {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    
+    .game-box h4 b {
+        font-weight: 550;
+    }
+    
+    .game-box .guess-text b {
+        color: red;
+    }
+    
+    .game-box .keyboard {
+        display: flex;
+        gap: 5px;
+        margin-top: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .keyboard button {
+        background-color: rgba(240, 190, 96, 0.795);
+        color: brown;
+        font-size: 1rem;
+        font-weight: 400;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px;
+        border-radius: 40%;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+    }
+    
+    .keyboard button:hover {
+        background-color: rgba(240, 190, 96, 1);
+    }
+    
+    .keyboard button[disabled] {
+        opacity: 0.6;
+        pointer-events: none;
+    }
+    
+    /* Media Queries */
+    
+    /* For small devices (phones, 375px and below) */
+    @media (max-width: 375px) {
+        .hangmanTemplate {
+            padding: 10px;
+            gap: 15px;
+        }
+    
+        #hangman {
+            font-size: 1.5rem;
+        }
+    
+        .img-box img {
+            max-height: 150px;
+        }
+    
+        .word-display .letter {
+            width: 20px;
+            font-size: 1.5rem;
+        }
+    
+        .game-box h4 {
+            font-size: 1rem;
+        }
+    
+        .keyboard button {
+            padding: 10px;
+            font-size: 0.8rem;
+        }
+    }
+    
+    /* For tablets (portrait mode) */
+    @media (min-width: 376px) and (max-width: 768px) {
+        .hangmanTemplate {
+            padding: 20px;
+            gap: 20px;
+        }
+    
+        #hangman {
+            font-size: 2rem;
+        }
+    
+        .img-box img {
+            max-height: 180px;
+        }
+    
+        .word-display .letter {
+            width: 25px;
+            font-size: 1.8rem;
+        }
+    
+        .game-box h4 {
+            font-size: 1.1rem;
+        }
+    
+        .keyboard button {
+            padding: 12px;
+            font-size: 0.9rem;
+        }
+    }
+    
+    /* For laptops/desktops (landscape mode) */
+    @media (min-width: 769px) and (max-width: 1200px) {
+        .hangmanTemplate {
+            padding: 30px;
+            gap: 30px;
+            display: flex !important;
+            flex-direction: row !important;
+    
+        }
+    
+        #hangman {
+            font-size: 2.5rem;
+        }
+    
+        .img-box img {
+            max-height: 250px;
+        }
+    
+        .word-display .letter {
+            width: 28px;
+            font-size: 2rem;
+        }
+    
+        .game-box h4 {
+            font-size: 1.2rem;
+        }
+    
+        .keyboard button {
+            padding: 14px;
+            font-size: 1rem;
+        }
+    }
+    
+    /* For large screens (desktops and laptops) */
+    @media (min-width: 1201px) {
+        .hangmanTemplate {
+            padding: 40px;
+            gap: 40px;
+            display: flex !important;
+            flex-direction: row !important;
+        }
+    
+        #hangman {
+            font-size: 3rem;
+        }
+    
+        .img-box img {
+            max-height: 300px;
+        }
+    
+        .word-display .letter {
+            width: 32px;
+            font-size: 2.2rem;
+        }
+    
+        .game-box h4 {
+            font-size: 1.3rem;
+        }
+    
+        .keyboard button {
+            padding: 16px;
+            font-size: 1.1rem;
+        }
+    }
